@@ -8,14 +8,19 @@ struct SignupView: View {
     @State var selection: Int? = nil
     
     fileprivate func SignUpButton() -> some View {
-        return NavigationLink(destination: Text("View")) {
-            ButtonTextTypeOne(title: "Sign Up")
+        return NavigationLink(destination: Text("Destination View"), tag: 1, selection: $selection) {
+            Button(action: {
+                self.selection = 1
+            }) {
+                ButtonTextTypeOne(title: "Sign Up")
+            }
         }
         .padding(.top, 40)
     }
     
     fileprivate func GoToLoginButton() -> some View {
         return NavigationLink(destination: LogInView()) {
+            
             Text("Already have an account?")
                 .foregroundColor(.gray)
                 .padding()

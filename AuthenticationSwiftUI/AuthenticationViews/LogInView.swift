@@ -5,10 +5,15 @@ struct LogInView: View {
     @State var email : String = ""
     @State var password : String = ""
     @State var isShowForgetPasswordView : Bool = false
+    @State var selection: Int? = nil
     
     fileprivate func LoginButton() -> some View {
-        return NavigationLink(destination: Text("View")) {
-            ButtonTextTypeOne(title: "Login")
+        return NavigationLink(destination: Text("Destination View"), tag: 1, selection: $selection) {
+            Button(action: {
+                self.selection = 1
+            }) {
+                ButtonTextTypeOne(title: "Login")
+            }
         }
         .padding(.top, 40)
     }
