@@ -2,9 +2,9 @@ import SwiftUI
 
 struct LogInView: View {
     
-    @State var email : String = ""
-    @State var password : String = ""
-    @State var isShowForgetPasswordView : Bool = false
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var isShowForgetPasswordView: Bool = false
     @State var selection: Int? = nil
     
     fileprivate func LoginButton() -> some View {

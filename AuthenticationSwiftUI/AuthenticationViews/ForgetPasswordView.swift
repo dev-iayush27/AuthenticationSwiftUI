@@ -3,9 +3,12 @@ import SwiftUI
 struct ForgetPasswordView: View {
     
     @State var email : String = ""
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     fileprivate func SendButton() -> some View {
-        return NavigationLink(destination: Text("View")) {
+        Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
             ButtonTextTypeOne(title: "Send")
         }
         .padding(.top, 40)

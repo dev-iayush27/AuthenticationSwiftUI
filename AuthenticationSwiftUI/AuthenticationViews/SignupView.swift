@@ -19,11 +19,14 @@ struct SignupView: View {
     }
     
     fileprivate func GoToLoginButton() -> some View {
-        return NavigationLink(destination: LogInView()) {
-            
-            Text("Already have an account?")
-                .foregroundColor(.gray)
-                .padding()
+        return NavigationLink(destination: LogInView(), tag: 2, selection: $selection) {
+            Button(action: {
+                self.selection = 2
+            }) {
+                Text("Already have an account?")
+                    .foregroundColor(.gray)
+                    .padding()
+            }
         }
     }
     
