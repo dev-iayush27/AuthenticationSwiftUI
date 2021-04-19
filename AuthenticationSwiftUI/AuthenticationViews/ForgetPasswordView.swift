@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ForgetPasswordView: View {
     
-    @State var email : String = ""
+    @State private var email : String = ""
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     fileprivate func SendButton() -> some View {

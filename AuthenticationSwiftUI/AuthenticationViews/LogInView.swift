@@ -2,17 +2,25 @@ import SwiftUI
 
 struct LogInView: View {
     
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var isShowForgetPasswordView: Bool = false
-    @State var selection: Int? = nil
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var isShowForgetPasswordView: Bool = false
+    @State private var showingAlert: Bool = false
+    @State private var selection: Int? = nil
     
     fileprivate func LoginButton() -> some View {
         return NavigationLink(destination: Text("Destination View"), tag: 1, selection: $selection) {
             Button(action: {
+                guard !email.isEmpty, !password.isEmpty else {
+                    self.showingAlert = true
+                    return
+                }
                 self.selection = 1
             }) {
                 ButtonTextTypeOne(title: "Login")
+            }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Error!"), message: Text("Please enter the data."), dismissButton: .default(Text("Got it!")))
             }
         }
         .padding(.top, 40)

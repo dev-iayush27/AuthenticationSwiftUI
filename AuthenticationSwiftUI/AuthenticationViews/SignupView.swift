@@ -2,17 +2,25 @@ import SwiftUI
 
 struct SignupView: View {
     
-    @State var name : String = ""
-    @State var email : String = ""
-    @State var password : String = ""
-    @State var selection: Int? = nil
+    @State private var name: String = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var selection: Int? = nil
+    @State private var showingAlert: Bool = false
     
     fileprivate func SignUpButton() -> some View {
         return NavigationLink(destination: Text("Destination View"), tag: 1, selection: $selection) {
             Button(action: {
+                guard !name.isEmpty, !email.isEmpty, !password.isEmpty else {
+                    self.showingAlert = true
+                    return
+                }
                 self.selection = 1
             }) {
                 ButtonTextTypeOne(title: "Sign Up")
+            }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Error!"), message: Text("Please enter the data."), dismissButton: .default(Text("Got it!")))
             }
         }
         .padding(.top, 40)
