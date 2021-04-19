@@ -11,6 +11,12 @@
 		590DFA2B262D692900A5BA63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590DFA2A262D692900A5BA63 /* ContentView.swift */; };
 		590DFA2D262D692A00A5BA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 590DFA2C262D692A00A5BA63 /* Assets.xcassets */; };
 		590DFA30262D692A00A5BA63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 590DFA2F262D692A00A5BA63 /* Preview Assets.xcassets */; };
+		590DFA3B262D694900A5BA63 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590DFA38262D694900A5BA63 /* LogInView.swift */; };
+		590DFA3C262D694900A5BA63 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590DFA39262D694900A5BA63 /* SignupView.swift */; };
+		590DFA3D262D694900A5BA63 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590DFA3A262D694900A5BA63 /* ForgetPasswordView.swift */; };
+		590DFA42262D6A8300A5BA63 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590DFA41262D6A8300A5BA63 /* Color+Extension.swift */; };
+		59C741BD262D84B100C04634 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C741BC262D84B100C04634 /* CustomTextField.swift */; };
+		59C741C1262D8EB100C04634 /* ButtonTextTypeOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C741C0262D8EB100C04634 /* ButtonTextTypeOne.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		590DFA2C262D692A00A5BA63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		590DFA2F262D692A00A5BA63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		590DFA31262D692A00A5BA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		590DFA38262D694900A5BA63 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		590DFA39262D694900A5BA63 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		590DFA3A262D694900A5BA63 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
+		590DFA41262D6A8300A5BA63 /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		59C741BC262D84B100C04634 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		59C741C0262D8EB100C04634 /* ButtonTextTypeOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextTypeOne.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,9 @@
 			children = (
 				590DFA28262D692900A5BA63 /* AuthenticationSwiftUIApp.swift */,
 				590DFA2A262D692900A5BA63 /* ContentView.swift */,
+				590DFA45262D6C4D00A5BA63 /* Extension */,
+				59C741BB262D848900C04634 /* CustomViews */,
+				590DFA3F262D6A5B00A5BA63 /* AuthenticationViews */,
 				590DFA2C262D692A00A5BA63 /* Assets.xcassets */,
 				590DFA31262D692A00A5BA63 /* Info.plist */,
 				590DFA2E262D692A00A5BA63 /* Preview Content */,
@@ -67,6 +82,33 @@
 				590DFA2F262D692A00A5BA63 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		590DFA3F262D6A5B00A5BA63 /* AuthenticationViews */ = {
+			isa = PBXGroup;
+			children = (
+				590DFA39262D694900A5BA63 /* SignupView.swift */,
+				590DFA38262D694900A5BA63 /* LogInView.swift */,
+				590DFA3A262D694900A5BA63 /* ForgetPasswordView.swift */,
+			);
+			path = AuthenticationViews;
+			sourceTree = "<group>";
+		};
+		590DFA45262D6C4D00A5BA63 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				590DFA41262D6A8300A5BA63 /* Color+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		59C741BB262D848900C04634 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				59C741BC262D84B100C04634 /* CustomTextField.swift */,
+				59C741C0262D8EB100C04634 /* ButtonTextTypeOne.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59C741BD262D84B100C04634 /* CustomTextField.swift in Sources */,
+				590DFA3D262D694900A5BA63 /* ForgetPasswordView.swift in Sources */,
+				590DFA42262D6A8300A5BA63 /* Color+Extension.swift in Sources */,
+				590DFA3C262D694900A5BA63 /* SignupView.swift in Sources */,
+				590DFA3B262D694900A5BA63 /* LogInView.swift in Sources */,
 				590DFA2B262D692900A5BA63 /* ContentView.swift in Sources */,
 				590DFA29262D692900A5BA63 /* AuthenticationSwiftUIApp.swift in Sources */,
+				59C741C1262D8EB100C04634 /* ButtonTextTypeOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
